@@ -8,7 +8,7 @@ import androidx.compose.material.Surface
 import com.github.greghynds.redux.Store
 import com.github.greghynds.redux.createStore
 import com.github.grehynds.moovy.AppState
-import com.github.grehynds.moovy.arch.middleware.createLoggingMiddleware
+import com.github.grehynds.moovy.arch.presentation.createLoggingMiddleware
 import com.github.grehynds.moovy.home.presentation.createLoadComingSoonAction
 import com.github.grehynds.moovy.home.ui.HomeUi
 import com.github.grehynds.moovy.rootReducer

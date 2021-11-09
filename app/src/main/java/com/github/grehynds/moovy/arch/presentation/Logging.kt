@@ -1,4 +1,4 @@
-package com.github.grehynds.moovy.arch.middleware
+package com.github.grehynds.moovy.arch.presentation
 
 import android.util.Log
 import com.github.greghynds.redux.Middleware
