@@ -32,6 +32,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
         useIR = true
+        freeCompilerArgs = ["-Xallow-result-return-type"]
     }
     buildFeatures {
         compose true
@@ -61,6 +62,14 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.5'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.fasterxml.jackson.core:jackson-annotations:2.11.2"
+    implementation "com.fasterxml.jackson.core:jackson-core:2.9.7"
+    implementation "com.squareup.retrofit2:converter-jackson:2.4.0"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 
     testImplementation 'junit:junit:4.+'
 
