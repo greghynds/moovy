@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moovy">
         <activity
-            android:name=".MainActivity"
+            android:name=".home.HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Moovy.NoActionBar">
