@@ -20,6 +20,6 @@ fun HomeUi(store: Store<AppState>) {
     when (state.screen) {
         is Loading -> Loading()
         is Error -> Error { store.dispatch(createLoadComingSoonAction()) }
-        is Display -> MoviesList(state.comingSoon.movies) { }
+        is Display -> MoviesList(state.comingSoon) { }
     }
 }

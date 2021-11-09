@@ -6,11 +6,12 @@ import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.github.grehynds.moovy.home.MoviesList
 import com.github.grehynds.moovy.home.domain.Movie
 
 @Composable
 fun MoviesList(
-    movies: List<Movie>,
+    movies: MoviesList,
     onClick: (Movie) -> Unit = {}
 ) {
     LazyColumn(

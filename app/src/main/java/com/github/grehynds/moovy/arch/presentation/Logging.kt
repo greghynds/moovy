@@ -6,7 +6,8 @@ import com.github.grehynds.moovy.AppState
 
 fun createLoggingMiddleware(): Middleware<AppState> = {
     { action ->
-        Log.d("Redux", "Dispatching: ${action.type}")
+        val text = "Dispatching: ${action.type}" +  if(action.payload is Throwable) ", Error: ${(action.payload as Throwable).message}" else ""
+        Log.d("Redux", text)
         action
     }
 }
