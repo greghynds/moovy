@@ -1,4 +1,4 @@
-package com.github.greghynds.moovy.home.ui
+package com.github.greghynds.moovy.app.ui.common
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button

@@ -9,7 +9,7 @@ import com.github.greghynds.redux.Store
 import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.home.presentation.createLoadComingSoonAction
 import com.github.greghynds.moovy.home.ui.HomeUi
-import com.github.greghynds.moovy.ui.theme.MoovyTheme
+import com.github.greghynds.moovy.app.ui.theme.MoovyTheme
 import org.koin.android.ext.android.inject
 
 class HomeActivity : ComponentActivity() {
@@ -21,7 +21,6 @@ class HomeActivity : ComponentActivity() {
 
         setContent {
             MoovyTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     HomeUi(store)
                 }

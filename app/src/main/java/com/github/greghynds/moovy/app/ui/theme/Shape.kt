@@ -1,4 +1,4 @@
-package com.github.greghynds.moovy.ui.theme
+package com.github.greghynds.moovy.app.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

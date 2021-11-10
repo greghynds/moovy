@@ -1,4 +1,4 @@
-package com.github.greghynds.moovy.ui.theme
+package com.github.greghynds.moovy.app.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

@@ -1,8 +1,9 @@
-package com.github.greghynds.moovy.home.ui
+package com.github.greghynds.moovy.app.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.github.greghynds.moovy.ui.theme.MoovyTheme
+import com.github.greghynds.moovy.app.ui.common.Error
+import com.github.greghynds.moovy.app.ui.theme.MoovyTheme
 
 
 @Preview(showBackground = true)

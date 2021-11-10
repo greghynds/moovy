@@ -9,6 +9,8 @@ import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.arch.presentation.ScreenState.*
 import com.github.greghynds.moovy.home.presentation.HomeState
 import com.github.greghynds.moovy.home.presentation.createLoadComingSoonAction
+import com.github.greghynds.moovy.app.ui.common.Error
+import com.github.greghynds.moovy.app.ui.common.Loading
 
 @Composable
 fun HomeUi(store: Store<AppState>) {
