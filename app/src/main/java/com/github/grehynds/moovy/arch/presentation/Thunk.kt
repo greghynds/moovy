@@ -14,11 +14,12 @@ fun <State> createThunk(
     block: suspend (Store<State>) -> Action
 ): Middleware<State> = { store ->
     { action ->
-        when {
-            action.isOfType(type) -> CoroutineScope(dispatchers.main).launch {
-                store.dispatch(withContext(dispatchers.io) { block(store) })
+        action.apply {
+            when {
+                action.isOfType(type) -> CoroutineScope(dispatchers.main).launch {
+                    store.dispatch(withContext(dispatchers.io) { block(store) })
+                }
             }
         }
-        action
     }
 }

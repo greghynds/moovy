@@ -6,7 +6,7 @@ import androidx.compose.runtime.rxjava2.subscribeAsState
 import com.github.greghynds.redux.Store
 import com.github.greghynds.redux.select
 import com.github.grehynds.moovy.AppState
-import com.github.grehynds.moovy.arch.ScreenState.*
+import com.github.grehynds.moovy.arch.presentation.ScreenState.*
 import com.github.grehynds.moovy.home.presentation.HomeState
 import com.github.grehynds.moovy.home.presentation.createLoadComingSoonAction
 

@@ -1,4 +1,4 @@
-package com.github.grehynds.moovy.home.data
+package com.github.grehynds.moovy.home.data.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

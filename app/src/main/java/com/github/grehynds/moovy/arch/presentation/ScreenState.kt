@@ -1,4 +1,4 @@
-package com.github.grehynds.moovy.arch
+package com.github.grehynds.moovy.arch.presentation
 
 sealed class ScreenState {
     object Display : ScreenState()

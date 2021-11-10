@@ -1,4 +1,4 @@
-package com.github.grehynds.moovy.home.domain
+package com.github.grehynds.moovy.home.domain.model
 
 data class Movie(
     val id: String,

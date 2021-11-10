@@ -1,7 +1,7 @@
 package com.github.grehynds.moovy.home.presentation
 
-import com.github.grehynds.moovy.arch.ScreenState
-import com.github.grehynds.moovy.arch.ScreenState.*
+import com.github.grehynds.moovy.arch.presentation.ScreenState
+import com.github.grehynds.moovy.arch.presentation.ScreenState.*
 import com.github.grehynds.moovy.home.MoviesList
 
 data class HomeState(

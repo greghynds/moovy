@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.github.grehynds.moovy.home.domain.Movie
+import com.github.grehynds.moovy.home.domain.model.Movie
 
 @Composable
 fun MovieCard(
