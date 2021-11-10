@@ -5,7 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rxjava2.subscribeAsState
 import com.github.greghynds.redux.Store
 import com.github.greghynds.redux.select
-import com.github.greghynds.moovy.AppState
+import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.arch.presentation.ScreenState.*
 import com.github.greghynds.moovy.home.presentation.HomeState
 import com.github.greghynds.moovy.home.presentation.createLoadComingSoonAction

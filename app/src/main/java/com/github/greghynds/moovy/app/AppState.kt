@@ -1,4 +1,4 @@
-package com.github.greghynds.moovy
+package com.github.greghynds.moovy.app
 
 import com.github.greghynds.moovy.home.presentation.HomeState
 

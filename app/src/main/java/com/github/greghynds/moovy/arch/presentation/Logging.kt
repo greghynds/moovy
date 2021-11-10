@@ -2,7 +2,7 @@ package com.github.greghynds.moovy.arch.presentation
 
 import android.util.Log
 import com.github.greghynds.redux.Middleware
-import com.github.greghynds.moovy.AppState
+import com.github.greghynds.moovy.app.AppState
 
 fun createLoggingMiddleware(): Middleware<AppState> = {
     { action ->

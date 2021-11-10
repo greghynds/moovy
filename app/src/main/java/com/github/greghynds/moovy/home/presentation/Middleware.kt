@@ -1,7 +1,7 @@
 package com.github.greghynds.moovy.home.presentation
 
 import com.github.greghynds.redux.Middleware
-import com.github.greghynds.moovy.AppState
+import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.arch.async.Dispatchers
 import com.github.greghynds.moovy.arch.domain.Params
 import com.github.greghynds.moovy.arch.presentation.createThunk
