@@ -2,6 +2,7 @@ package com.github.greghynds.moovy.app
 
 import android.app.Application
 import com.github.greghynds.moovy.app.di.Dependencies
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 class App : Application() {
@@ -11,6 +12,7 @@ class App : Application() {
 
         startKoin {
             modules(Dependencies.all)
+            androidContext(this@App)
         }
     }
 }

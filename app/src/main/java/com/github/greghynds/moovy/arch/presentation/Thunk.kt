@@ -1,9 +1,9 @@
 package com.github.greghynds.moovy.arch.presentation
 
+import com.github.greghynds.moovy.arch.async.Dispatchers
 import com.github.greghynds.redux.Action
 import com.github.greghynds.redux.Middleware
 import com.github.greghynds.redux.Store
-import com.github.greghynds.moovy.arch.async.Dispatchers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

@@ -1,12 +1,13 @@
 package com.github.greghynds.moovy.arch.presentation
 
 import android.util.Log
-import com.github.greghynds.redux.Middleware
 import com.github.greghynds.moovy.app.AppState
+import com.github.greghynds.redux.Middleware
 
 fun createLoggingMiddleware(): Middleware<AppState> = {
     { action ->
-        val text = "Dispatching: ${action.type}" +  if(action.payload is Throwable) ", Error: ${(action.payload as Throwable).message}" else ""
+        var text = "Dispatching: ${action.type}"
+        if (action.payload is Throwable) text += ", Error: ${(action.payload as Throwable).message}"
         Log.d("Redux", text)
         action
     }

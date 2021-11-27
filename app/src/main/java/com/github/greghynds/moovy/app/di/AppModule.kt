@@ -1,6 +1,8 @@
 package com.github.greghynds.moovy.app.di
 
 import com.github.greghynds.moovy.app.AppState
+import com.github.greghynds.moovy.app.presentation.createRestoreAppStateThunk
+import com.github.greghynds.moovy.app.presentation.createSaveAppStateEffect
 import com.github.greghynds.moovy.app.rootReducer
 import com.github.greghynds.moovy.arch.presentation.createLoggingMiddleware
 import com.github.greghynds.moovy.home.presentation.createGetComingSoonThunk
@@ -13,7 +15,9 @@ val appModule = module {
             rootReducer,
             AppState.INITIAL,
             createLoggingMiddleware(),
-            createGetComingSoonThunk(get(), get())
+            createGetComingSoonThunk(get(), get()),
+            createRestoreAppStateThunk(get(), get()),
+            createSaveAppStateEffect(get(), get())
         )
     }
 }
