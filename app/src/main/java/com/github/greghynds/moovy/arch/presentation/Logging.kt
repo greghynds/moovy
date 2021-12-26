@@ -1,14 +1,27 @@
 package com.github.greghynds.moovy.arch.presentation
 
 import android.util.Log
-import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.redux.Middleware
+import com.github.grehynds.redux.fsa.Action
 
-fun createLoggingMiddleware(): Middleware<AppState> = {
+fun <State> createLoggingMiddleware(): Middleware<State> = {
     { action ->
-        var text = "Dispatching: ${action.type}"
-        if (action.payload is Throwable) text += ", Error: ${(action.payload as Throwable).message}"
-        Log.d("Redux", text)
+        if (action is Action) {
+            var text = "Dispatching: ${action.type}"
+            if (action?.payload is Throwable) text += ", Error: ${(action.payload as Throwable).message}"
+            Log.d("Redux", text)
+        }
         action
+    }
+}
+
+fun <State> createThunkMiddleware(): Middleware<State> = { store ->
+    { action ->
+        if (action is Thunk<*>) {
+            Log.d("Redux", "Received thunk!")
+            (action as Thunk<State>).createAction(store)
+        } else {
+            action
+        }
     }
 }

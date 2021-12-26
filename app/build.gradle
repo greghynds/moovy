@@ -32,7 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
         useIR = true
-        freeCompilerArgs = ["-Xallow-result-return-type"]
+        freeCompilerArgs += [
+                "-Xallow-result-return-type",
+                "-Xopt-in=kotlin.contracts.ExperimentalContracts"
+        ]
     }
     buildFeatures {
         compose true
@@ -58,7 +61,11 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
     implementation 'androidx.activity:activity-compose:1.4.0'
-    implementation 'com.github.greghynds:redux-kt:1.0.1'
+
+    implementation "com.github.greghynds.redux-kt:store:$redux_version"
+    implementation "com.github.greghynds.redux-kt:android-extensions:$redux_version"
+    implementation "com.github.greghynds.redux-kt:flux-standard-action:$redux_version"
+
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.5'

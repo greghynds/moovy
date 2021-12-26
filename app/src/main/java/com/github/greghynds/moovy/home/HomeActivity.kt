@@ -7,10 +7,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.app.ui.theme.MoovyTheme
-import com.github.greghynds.moovy.home.presentation.createLoadComingSoonAction
-import com.github.greghynds.moovy.home.presentation.createRestoreAppStateAction
+import com.github.greghynds.moovy.arch.presentation.createGetComingSoon
 import com.github.greghynds.moovy.home.ui.HomeUi
 import com.github.greghynds.redux.Store
+import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 
 class HomeActivity : ComponentActivity() {
@@ -28,11 +28,6 @@ class HomeActivity : ComponentActivity() {
             }
         }
 
-        store.dispatch(createLoadComingSoonAction())
-    }
-
-    override fun onResume() {
-        super.onResume()
-        store.dispatch(createRestoreAppStateAction())
+        store.dispatch(createGetComingSoon(get(), get()))
     }
 }

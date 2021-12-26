@@ -2,7 +2,7 @@ package com.github.greghynds.moovy.home.presentation
 
 import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.home.MoviesList
-import com.github.greghynds.redux.Action
+import com.github.grehynds.redux.fsa.Action
 
 
 const val LOAD_COMING_SOON = "LOAD_COMING_SOON"

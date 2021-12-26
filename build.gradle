@@ -2,6 +2,7 @@
 buildscript {
     ext {
         compose_version = '1.0.5'
+        redux_version = 'main-SNAPSHOT'
     }
 
     repositories {
