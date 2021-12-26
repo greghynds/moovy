@@ -1,6 +1,7 @@
 package com.github.greghynds.moovy.app.di
 
 import com.github.greghynds.moovy.app.AppState
+import com.github.greghynds.moovy.app.presentation.createSaveAppStateMiddleware
 import com.github.greghynds.moovy.app.rootReducer
 import com.github.greghynds.moovy.arch.presentation.createLoggingMiddleware
 import com.github.greghynds.moovy.arch.presentation.createThunkMiddleware
@@ -13,7 +14,8 @@ val appModule = module {
             rootReducer,
             AppState.INITIAL,
             createLoggingMiddleware(),
-            createThunkMiddleware()
+            createThunkMiddleware(),
+            createSaveAppStateMiddleware(get(), get()),
         )
     }
 }

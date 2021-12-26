@@ -5,7 +5,7 @@ import com.github.greghynds.moovy.home.domain.model.Movie
 import com.github.greghynds.moovy.home.presentation.createLoadComingSoonAction
 import com.github.greghynds.moovy.home.presentation.createLoadComingSoonFailureAction
 import com.github.greghynds.moovy.home.presentation.createLoadComingSoonSuccessAction
-import com.github.greghynds.redux.Action
+import com.github.grehynds.redux.fsa.Action
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
