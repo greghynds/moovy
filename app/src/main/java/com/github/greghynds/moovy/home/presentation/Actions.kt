@@ -3,10 +3,9 @@ package com.github.greghynds.moovy.home.presentation
 import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.arch.async.Dispatchers
 import com.github.greghynds.moovy.arch.domain.Params
-import com.github.greghynds.moovy.arch.presentation.Thunk
 import com.github.greghynds.moovy.home.MoviesList
 import com.github.greghynds.moovy.home.domain.GetComingSoon
-import com.github.greghynds.redux.Store
+import com.github.greghynds.thunk.Thunk
 import com.github.grehynds.redux.fsa.Action
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -30,22 +29,18 @@ fun createLoadComingSoonFailureAction(error: Throwable) = Action(LOAD_COMING_SOO
 fun createGetComingSoonAction(
     getComingSoon: GetComingSoon,
     dispatchers: Dispatchers
-): Thunk<AppState> {
-    return object : Thunk<AppState> {
-        override fun create(store: Store<AppState>): Any {
-            store.dispatch(createLoadComingSoonAction())
+) = Thunk<AppState> { store ->
+    store.dispatch(createLoadComingSoonAction())
 
-            return CoroutineScope(dispatchers.main).launch {
-                withContext(dispatchers.io) {
-                    store.dispatch(
-                        getComingSoon.execute(Params.None)
-                            .fold(
-                                ::createLoadComingSoonSuccessAction,
-                                ::createLoadComingSoonFailureAction
-                            )
+    CoroutineScope(dispatchers.main).launch {
+        withContext(dispatchers.io) {
+            store.dispatch(
+                getComingSoon.execute(Params.None)
+                    .fold(
+                        ::createLoadComingSoonSuccessAction,
+                        ::createLoadComingSoonFailureAction
                     )
-                }
-            }
+            )
         }
     }
 }

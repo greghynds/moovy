@@ -4,8 +4,8 @@ import com.github.greghynds.moovy.app.AppState
 import com.github.greghynds.moovy.app.presentation.createSaveAppStateMiddleware
 import com.github.greghynds.moovy.app.rootReducer
 import com.github.greghynds.moovy.arch.presentation.createLoggingMiddleware
-import com.github.greghynds.moovy.arch.presentation.createThunkMiddleware
 import com.github.greghynds.redux.createStore
+import com.github.greghynds.thunk.createThunkMiddleware
 import org.koin.dsl.module
 
 val appModule = module {
